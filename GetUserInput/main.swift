@@ -8,5 +8,11 @@
 
 import Foundation
 
-print("Hello, World!")
+print("Enter your name")
 
+let input = NSString(data: FileHandle.standardInput.availableData, encoding:String.Encoding.utf8.rawValue)
+
+if let userInput: String = input as String? {
+    
+    print("Hello, " + userInput)
+}
